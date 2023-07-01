@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const signup = require('../controllers/appController');
-const { sign } = require('crypto');
+const {signup, getbill} = require('../controllers/appController');
 
-router.get('/',signup);
+router.post('/user/signup',signup);
+router.post('/product/getbill',getbill);
 
 module.exports = router;
