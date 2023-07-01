@@ -1,8 +1,8 @@
 const express = require('express');
 const router = express.Router();
+const signup = require('../controllers/appController');
+const { sign } = require('crypto');
 
-router.get('/',(req,res)=>{
-    res.send("Hello Peter");
-});
+router.get('/',signup);
 
 module.exports = router;
